@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Chessnut</title>
+		<link rel="icon" type="image/ico" href="/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- styles -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/css/master.css" rel="stylesheet">
+		<link href="/css/jquery.pnotify.default.css" rel="stylesheet">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script>
+			document.userId = "<%= user.userId %>";
+			document.userName = "<%= user.name %>"
+		</script>
+		
+	</head>
+
+	<body>
+
+		<div class="container abs">
+
+			<p>Welcome User: <%= user.name %></p>
+
+		</div> <!-- /container -->
+
+
+		<div id="chat">
+			<div id="chatText" class="scrollableTextWrapArea"></div>
+			<input id="chatInput" type="text"/>
+		</div>
+
+		<div id="gameMenu" class="menu">
+			<button class="btn btn-primary" onclick="displaySettings();">Settings</button><br><br>
+			<button class="btn btn-warning" onclick="leaveGame();">Leave Game</button><br><br>
+			<button class="btn btn-danger"  onclick="leaveGame();logout();">Leave and Logout</button>
+		</div>
+
+		<div id="joinMenu" class="menu">
+			<button class="btn btn-primary" id="joinGame">Join Game</button><br><br>
+			<button class="btn btn-success" id="spectateGame">Spectate Game</button>
+		</div>
+
+		<div id="gameStatus">
+			<div class="loading">
+				<div class="circle"></div>
+				<div class="circle1"></div>
+			</div>
+			<div id="selfInfo">
+				<div class="gameTime text">DungFu</div>
+				<div class="name text">0:00</div>
+			</div>
+			<div id="opponentInfo">
+				<div class="name text">DungFu</div>
+				<div class="gameTime text">0:00</div>
+			</div>
+		</div>
+
+		<!-- javascript -->
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/require.js"></script>
+		<script src="/js/jquery-1.8.2.min.js"></script>
+		<script src="/js/jquery.bpopup.min.js"></script>
+		<script src="/js/jquery.pnotify.min.js"></script>
+		<script src="/js/underscore-min.js"></script>
+		<script src="/js/backbone-min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/three.min.js"></script>
+		<script src="/js/Tween.js"></script>
+		<script src="/js/Detector.js"></script>
+		<!--
+		<script src="/js/chess.js"></script>
+		<script src="/js/sockets.js"></script>
+		<script src="/js/chat.js"></script>
+		-->
+		<script src="/js/board.js"></script>
+		<script src="/js/player.js"></script>
+		<script src="/js/main.js"></script>
+
+		<script>
+			$('#joinMenu').bPopup({
+				modal: false,
+				escClose: false
+			});
+		</script>
+
+	</body>
+</html>

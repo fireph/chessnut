@@ -1,0 +1,196 @@
+body {
+	overflow: hidden;
+}
+
+.abs {
+	position: absolute;
+}
+
+#chat {
+	position: absolute;
+	bottom: 0px;
+	left: -380px;
+	width: 400px;
+	height: 200px;
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 0px 20px 0px 0px;
+	color: #EEE;
+	font-weight: 200;
+	transition: background 500ms, left 500ms;
+    -webkit-transition: background 500ms, left 500ms;
+    -moz-transition: background 500ms, left 500ms;
+}
+
+#chatText {
+	position: absolute;
+	width: 384px;
+	height: 152px;
+	margin: 0px;
+}
+
+.scrollableTextWrapArea {
+	padding: 4px 8px;
+    overflow: hidden;
+    white-space: pre-wrap;  
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap; 
+    white-space: -o-pre-wrap;  
+    word-wrap: break-word;
+    margin: 0px;
+}
+
+#chatInput {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 388px;
+	height: 30px;
+	margin: 0px;
+	border: 0px;
+	border-top: hidden 1px #333;
+	color: #EEE;
+	font-weight: 200;
+	background: rgba(0, 0, 0, 0);
+    resize: none;
+    border-radius: 0px;
+}
+
+.chatMessage {
+    clear: both;
+    word-wrap: break-word;
+}
+
+.chatMessageUser {
+    font-weight: bold;
+    display: inline;
+    word-wrap: break-word;
+}
+
+.chatMessageText {
+    display: inline;
+    word-wrap: break-word;
+}
+
+.menu {
+	display: none;
+	padding: 25px;
+	outline:rgb(92,131,25) solid 3px;
+	background-color: rgba(25,25,25,0.7);
+}
+
+#gameStatus {
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	margin-left: -250px;
+	z-index: 99;
+	width: 500px;
+}
+
+.loading {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -40px;
+	width: 80px;
+	height: 70px;
+	padding-top: 10px;
+	z-index: 101;
+	background-color: rgba(10,10,10,0.9);
+	border-radius: 40px;
+}
+
+.circle {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-right:5px solid rgba(0,0,0,0);
+	border-left:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 35px #2187e7;
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	-moz-animation:spinPulse 1s infinite ease-in-out;
+	-webkit-animation:spinPulse 1s infinite linear;
+}
+.circle1 {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-left:5px solid rgba(0,0,0,0);
+	border-right:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 15px #2187e7; 
+	width:30px;
+	height:30px;
+	margin:0 auto;
+	position:relative;
+	top:-50px;
+	-moz-animation:spinoffPulse 1s infinite linear;
+	-webkit-animation:spinoffPulse 1s infinite linear;
+}
+@-moz-keyframes spinPulse {
+	0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+	50% { -moz-transform:rotate(145deg); opacity:1; }
+	100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+	0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7; }
+	50% { -webkit-transform:rotate(145deg); opacity:1;}
+	100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+
+#selfInfo {
+	width: 250px;
+	height: 50px;
+	z-index: 100;
+	background-color: rgba(200,200,200,0.85);
+	border-bottom-left-radius: 8px;
+	font-size: 25px;
+	color: #222222;
+	position: absolute;
+	right: 50%;
+	-moz-box-shadow: -2px 2px 0px 2px #2187e7;
+	-webkit-box-shadow: -2px 2px 0px 2px #2187e7;
+	box-shadow: -2px 2px 0px 2px #2187e7;
+}
+
+#opponentInfo {
+	width: 250px;
+	height: 50px;
+	z-index: 100;
+	background-color: rgba(25,25,25,0.85);
+	border-bottom-right-radius: 8px;
+	font-size: 25px;
+	color: #eeeeee;
+	position: absolute;
+	left: 50%;
+	-moz-box-shadow: 2px 2px 0px 2px #2187e7;
+	-webkit-box-shadow: 2px 2px 0px 2px #2187e7;
+	box-shadow: 2px 2px 0px 2px #2187e7;
+}
+
+#selfInfo .text {
+	white-space: no-wrap;
+	margin-top: 14px;
+	margin-left: 14px;
+	float: left;
+	clear: none;
+}
+
+#opponentInfo .text {
+	white-space: no-wrap;
+	margin-top: 14px;
+	margin-right: 14px;
+	float: right;
+	clear: none;
+}

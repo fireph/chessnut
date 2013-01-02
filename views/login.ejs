@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Chessnut</title>
+		<link rel="icon" type="image/ico" href="/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- styles -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/css/master.css" rel="stylesheet">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class = "row">
+				<h2>New User</h2>
+			</div>
+			<div class = "row">
+				<form class="well form-inline" action="/register/local" method="post">
+					<input type="text" class="input-medium" name="username" placeholder="Username">
+					<input type="password" class="input-medium" name="password" placeholder="Password">
+					<input type="text" class="input-medium" name="email" placeholder="Email">
+					<input type="text" class="input-medium" name="name" placeholder="Name/Nickname">
+					<button type="submit" class="btn">Register</button>
+				</form>
+			</div>
+			<div class = "row">
+				<h2>Returning User</h2>
+			</div>
+			<div class = "row">
+				<form class="well form-inline" action="/auth/local" method="post">
+					<input type="text" class="input-medium" name="username" placeholder="Username">
+					<input type="password" class="input-medium" name="password" placeholder="Password">
+					<label class="checkbox">
+						<input type="checkbox" name="rememberMe"> Remember me
+					</label>
+					<button type="submit" class="btn">Sign in</button>
+				</form>
+			</div>
+			<div class="row">
+				<a href="/auth/facebook"><img src="/img/Facebook.png"></a>
+			</div>
+
+		</div> <!-- /container -->
+
+		<!-- javascript -->
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/js/jquery-1.8.2.min.js"></script>
+		<script src="/js/underscore-min.js"></script>
+		<script src="/js/backbone-min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
