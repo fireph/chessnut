@@ -7,7 +7,8 @@
 	"scripts": {
 		"test"	:	"node app.js",
 		"start"	:	"forever -l logfile-chessnut.log -a start app.js",
-		"stop"	:	"forever -a stop app.js"
+		"stop"	:	"forever -a stop app.js",
+		"list"	:	"forever list"
 	},
 	"repository": {
 		"type": "git",
