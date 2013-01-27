@@ -1,0 +1,31 @@
+{
+	"name": "chessnut",
+	"preferGlobal": "true",
+	"version": "0.1.0",
+	"author": "fireph",
+	"description": "Website for chessnut",
+	"scripts": {
+		"start"			:	"node app.js",
+		"forever-start"	:	"forever -l logfile-chessnut.log -a start app.js",
+		"forever-stop"	:	"forever -a stop app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DungFu/chessnut"
+	},
+	"dependencies" : {
+		"express"			:	"3.0.x",
+		"mongoskin"			:	"0.4.x",
+		"socket.io"			:	"0.9.x",
+		"ejs"				:	"0.8.x",
+		"passport"			:	"0.1.x",
+		"passport-local"	:	"0.1.x",
+		"passport-facebook"	:	"0.1.x",
+		"glicko2"			:	"0.5.x",
+		"node-uuid"			:	"1.4.x",
+		"chess.js"			:	"git://github.com/jhlywa/chess.js.git#master"
+	}, 
+	"engines": {
+		"node": ">=0.8"
+	}
+}

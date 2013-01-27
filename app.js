@@ -6,7 +6,7 @@ var redisUrl = "127.0.0.1";
 var redisPass = "pass";
 
 //chess.js
-var ch = require('./chess.js');
+var ch = require('chess.js');
 var uuid = require('node-uuid');
 var glicko2 = require('glicko2');
 
@@ -51,6 +51,7 @@ var passport = require('passport')
 
 //config express
 app.configure(function() {
+	app.use(express.compress());
 	app.set('views', __dirname + '/views');
 	app.set('view options', { layout: false});
 	app.set('view engine', 'ejs');
@@ -60,7 +61,6 @@ app.configure(function() {
 	app.use(passport.initialize());
 	app.use(passport.session());
 	app.use(express.static(__dirname + '/static'));
-	app.use(express.compress());
 	app.use(app.router);
 });
 
