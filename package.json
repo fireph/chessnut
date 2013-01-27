@@ -23,6 +23,7 @@
 		"passport-facebook"	:	"0.1.x",
 		"glicko2"			:	"0.5.x",
 		"node-uuid"			:	"1.4.x",
+		"forever"			:	"0.10.x",
 		"chess.js"			:	"git://github.com/jhlywa/chess.js.git#master"
 	}, 
 	"engines": {
