@@ -5,9 +5,9 @@
 	"author": "fireph",
 	"description": "Website for chessnut",
 	"scripts": {
-		"start"			:	"node app.js",
-		"forever-start"	:	"forever -l logfile-chessnut.log -a start app.js",
-		"forever-stop"	:	"forever -a stop app.js"
+		"test"	:	"node app.js",
+		"start"	:	"forever -l logfile-chessnut.log -a start app.js",
+		"stop"	:	"forever -a stop app.js"
 	},
 	"repository": {
 		"type": "git",
