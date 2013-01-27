@@ -10,9 +10,6 @@ var ch = require('chess.js');
 var uuid = require('node-uuid');
 var glicko2 = require('glicko2');
 
-//gzippo
-//var gzippo = require('gzippo');
-
 //express
 var express = require('express');
 var app = express();
